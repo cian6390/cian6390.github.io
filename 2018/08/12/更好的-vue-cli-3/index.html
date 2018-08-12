@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description" content="網頁技術, 前端, 後端, 生活, 閱讀, 筆記"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>更好的 vue-cli 3 - 生活與技術</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com/cian6390"><span>Github</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="https://images2.imgbox.com/e1/ff/W42RCDl2_o.jpg"><div class="post-title"><h1 class="title">更好的 vue-cli 3</h1><ul class="meta"><li><i class="icon icon-author"></i>Cian</li><li><i class="icon icon-clock"></i>2 Minutes</li><li><i class="icon icon-calendar"></i>August 12, 2018</li></ul></div></div><div class="article-content" style="max-width:800px"><h1 id="什麼是-vue-cli"><a href="#什麼是-vue-cli" class="headerlink" title="什麼是 vue-cli ?"></a>什麼是 vue-cli ?</h1><p>vue-cli 用於建構一個完整以<code>vuejs</code>為專案基底的專案</p>
+<ul>
+<li>通過CLI(<code>command-line interface</code>)的交互快速搭建專案架構</li>
+<li>搭配<code>@vue/cli</code>與<code>@vue/cli-service-global</code>實現零配置專案搭建</li>
+<li><code>@vue/cli-service</code>開發運行環境包含以下幾個特性<ul>
+<li>可更新</li>
+<li>建構於webpack，擁有合理的預設值</li>
+<li>通過項目中的配置加以設定</li>
+<li>可使用插件(<code>plugins</code>)擴充</li>
+</ul>
+</li>
+</ul>
+<h2 id="CLI"><a href="#CLI" class="headerlink" title="CLI"></a>CLI</h2><p>安裝全域套件<code>@vue/cli</code>之後系統就會有<code>vue</code>指令可以使用，在<code>v3</code>後我們除了使用<code>vue</code>命令建構專之外也多了<code>vue ui</code>命令來建立、管理專案。</p>
+<h2 id="CLI-Service"><a href="#CLI-Service" class="headerlink" title="CLI Service"></a>CLI Service</h2><p><code>@vue/cli-service</code> 是個全域開發依賴套件，它會自動被安裝於使用<code>@cue-cli</code>所建構的專案之中。</p>
+<p>而CLI Service建構於<code>webpack</code>與<code>webpack-dev-server</code>，包含：</p>
+<ul>
+<li>核心的service、loaders與其他CLI Plugins</li>
+<li>一個適用於大多數app的webpack設定</li>
+<li>命令<code>serve</code>, <code>build</code>, <code>inspect</code> 命令來自<code>vue-cli-service</code></li>
+</ul>
+<h2 id="CLI-Plugins"><a href="#CLI-Plugins" class="headerlink" title="CLI Plugins"></a>CLI Plugins</h2><p>CLI Plugins是選擇性的功能，例如 Bbabel/TypeScript, ESLint, Test etc… 透過前綴<code>@vue/cli-plugin-</code>(for build-in plugins) 或是 <code>vue-cli-plugin</code>(for community plugins)來安裝plugin。<br>當使用<code>vue-cli-service</code>的命令，會自動地執行<code>package.json</code>裡頭的loads與 CLI Plugins。</p>
+<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p><strong>nodejs版本至少要8.9以上，但建議8.11.0以上</strong></p>
+<blockquote>
+<p>若環境已經存在(1.x或 2.x)，請先執行<code>npm uninstall vue-cli -g</code> 移除。</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br><span class="line"><span class="meta">#</span> 或是</span><br><span class="line">yarn global add @vue/cli</span><br></pre></td></tr></table></figure>
+<p>安裝完後，使用以下命令確認已安裝正確版本的<code>@vue/cli</code><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue --version</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>本篇內容基於 <a href="https://cli.vuejs.org/guide/" target="_blank" rel="noopener">cli.vuejs.org</a></p>
+</blockquote>
+</div><div class="article-meta" style="max-width:800px"><div class="tags"><i class="icon icon-tag"></i><ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue-cli/">vue-cli</a><span class="tag-list-count">1</span></li></ul></div></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/2018/08/05/轉換角度與弧度/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/cian6390" title="Github" target="_blank"><i class="icon icon-github"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2018 生活與技術<br><small>POWER BY <a href="https://hexo.io" target="_blank">HEXO</a></small><small>, THEME BY <a href="https://github.com/BoizZ/hexo-theme-laughing" target="_blank">LAUGHING</a></small></p></div></div></div><script>var wrap = document.getElementById('wrap');
+window.onload = function () {
+  wrap.className += ' done';
+}</script></body></html>
