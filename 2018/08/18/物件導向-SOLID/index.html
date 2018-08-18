@@ -1,0 +1,41 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="email=no"><meta name="description" content="網頁技術, 前端, 後端, 生活, 閱讀, 筆記"><meta name="keywords" content="Hexo, Gruntjs, Nodejs, Reactjs, Vuejs"><title>物件導向 SOLID - 生活與技術</title><link rel="stylesheet" href="/css/main_style.min.css"><link rel="icon" href="/favicon.ico"></head><body><input id="navi" type="checkbox"><ul class="main-navication"><li><a href="/"><span>Home</span></a></li><li><a href="https://github.com/cian6390"><span>Github</span></a></li></ul><div class="wrapper" id="wrap"><div class="post-header"><label class="navi-button light" for="navi">MENU</label><img class="background" src="https://images2.imgbox.com/e1/ff/W42RCDl2_o.jpg"><div class="post-title"><h1 class="title">物件導向 SOLID</h1><ul class="meta"><li><i class="icon icon-author"></i>Cian</li><li><i class="icon icon-clock"></i>2 Minutes</li><li><i class="icon icon-calendar"></i>August 18, 2018</li></ul></div></div><div class="article-content" style="max-width:800px"><h1 id="物件導向-SOLID"><a href="#物件導向-SOLID" class="headerlink" title="物件導向 SOLID"></a>物件導向 SOLID</h1><p>面對原始碼改變的策略</p>
+<h2 id="單一職責原則-Single-Responsibility-Principle"><a href="#單一職責原則-Single-Responsibility-Principle" class="headerlink" title="單一職責原則 Single Responsibility Principle"></a>單一職責原則 Single Responsibility Principle</h2><ul>
+<li>關注點分離</li>
+<li>不貪方便把各種需要用到的東西都放在一起，須依照真正需要的屬性來拆職責</li>
+<li>如果將類別拆太多會造成效能問題，沒有做好autoload最佳化的話，效能會被影響<br>降低單一類別發生改變時對程式造成的影響</li>
+</ul>
+<h2 id="開閉原則-Open-Closed-Principle"><a href="#開閉原則-Open-Closed-Principle" class="headerlink" title="開閉原則 Open-Closed Principle"></a>開閉原則 Open-Closed Principle</h2><ul>
+<li>考慮抽象層級介面互動</li>
+<li>將變化交給其他(子)類別處理</li>
+<li>只需要異動metadata 或 config</li>
+<li>不用一開始就做OCP, 它是一個精神而不是通例</li>
+<li>大多時候我們無法預料到一個功能需要擴充，但我們可以使用測試與重構來解決此問題。<br>主類別不因新需求而改變</li>
+</ul>
+<h2 id="里氏替換原則-Liskov-Substitution-Principle"><a href="#里氏替換原則-Liskov-Substitution-Principle" class="headerlink" title="里氏替換原則 Liskov Substitution Principle"></a>里氏替換原則 Liskov Substitution Principle</h2><ul>
+<li>Design by contract</li>
+<li>方法簽名，回傳值與異常錯誤回應要一致</li>
+<li>使用type hint指定參數型態與回傳值型態</li>
+<li>依賴子類別的地方不能可以被父類別取代</li>
+<li>使用繼承之前，先思考是否能使用組合或其他方式來實現目的<br>避免繼承時子類別時行為改變</li>
+</ul>
+<h2 id="最小知識原則-Least-Knowledge-Principle"><a href="#最小知識原則-Least-Knowledge-Principle" class="headerlink" title="最小知識原則 Least Knowledge Principle"></a>最小知識原則 Least Knowledge Principle</h2><ul>
+<li>減少類別中的public method</li>
+<li>封裝已成形的操作流程</li>
+<li>將外部用不到的方法設定為 private, protected<br>避免暴露過多資訊，造成該程式碼改變時影響到其他不想影響的地方</li>
+</ul>
+<h2 id="介面隔離原則-Interface-Segregation-Principle"><a href="#介面隔離原則-Interface-Segregation-Principle" class="headerlink" title="介面隔離原則 Interface Segregation Principle"></a>介面隔離原則 Interface Segregation Principle</h2><ul>
+<li>程式只能依賴該程式需要的介面，沒有用到的介面比沒有介面還糟糕</li>
+<li>interface是一個”可以做什麼”的東西，而不是”東西”</li>
+<li>減少interface可以做的事情</li>
+<li>如果interface有空實做”沒有任何行為的方法”存在，代表該interface可以在細化<br>面對擁有方法介面，而非實作方法的類別</li>
+</ul>
+<h2 id="依賴反轉原則-Dependency-Inversion-Principle"><a href="#依賴反轉原則-Dependency-Inversion-Principle" class="headerlink" title="依賴反轉原則 Dependency Inversion Principle"></a>依賴反轉原則 Dependency Inversion Principle</h2><ul>
+<li>依賴抽象，而非細節。不要把程式碼依賴寫死在某種程式碼</li>
+<li>互動類別交給抽象類別或是介面</li>
+<li>會改變的實作就放到子類別裡面</li>
+<li>抽象層次要清晰明瞭，避免令人困惑其類別特徵<br>避免高階程式因低階程式改變而被迫改變</li>
+</ul>
+</div><div class="article-meta" style="max-width:800px"><div class="tags"><i class="icon icon-tag"></i><ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/oop/">oop</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/solid/">solid</a><span class="tag-list-count">1</span></li></ul></div></div><ul class="navication"><li class="home"><a href="/"><i class="icon icon-home"></i></a></li><li><a href="/2018/08/12/更好的-vue-cli-3/"><i class="icon icon-arror-right"></i></a></li></ul><div class="page-footer"><div class="top"><ul class="social"><li><a href="https://github.com/cian6390" title="Github" target="_blank"><i class="icon icon-github"></i></a></li></ul></div><div class="bottom"><p class="copyright">© 2018 生活與技術<br><small>POWER BY <a href="https://hexo.io" target="_blank">HEXO</a></small><small>, THEME BY <a href="https://github.com/BoizZ/hexo-theme-laughing" target="_blank">LAUGHING</a></small></p></div></div></div><script>var wrap = document.getElementById('wrap');
+window.onload = function () {
+  wrap.className += ' done';
+}</script></body></html>
